@@ -2,14 +2,15 @@
 
 from flask import Flask
 import socketio
+from communication import Server as game_server
 
 static_files = {
-    '/': r'html\index.html',
-    '/script.js': r'client-side-scripts\script.js',
-    '/style.css': r'css\style.css',
-    '/login': r'html\login.html',
-    'login_style.css': r'css\login_style.css',
-    'login_script.js': r'client-side-scripts\login_script.js'
+    '/': r'html/index.html',
+    '/script.js': r'client-side-scripts/script.js',
+    '/style.css': r'css/style.css',
+    '/login': r'html/login.html',
+    'login_style.css': r'css/login_style.css',
+    'login_script.js': r'client-side-scripts/login_script.js'
 }
 
 sio = socketio.Server(async_mode='threading')
