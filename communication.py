@@ -85,7 +85,7 @@ class Server(Handler):
 
         # create the socket on in self and bind it to what's
         # configured in the config file
-        self.sock = socket.socket()
+        self.sock = sockets.socket()
         self.sock.bind((config.IP, config.PORT))
         self.sock.listen(1)
         
@@ -99,5 +99,5 @@ class Client(Handler):
         
         # create socket and connect to the info configured
         # in the config file
-        self.sock = socket.socket()
+        self.sock = sockets.socket()
         self.sock.connect((config.IP, config.PORT))
